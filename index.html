@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Node Lessons</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <base href="/">
 </head>
-<body>
-    <h1>HELLO ALL</h1>
+<body ng-app="node-lessons">
+
+    <header>
+        <div class="wrapper">
+            <h1 class="logo"><a href="/">Node Lessons</a></h1>
+            <ul class="navigation">
+                <li class="navigation__item"><a class="navigation__link" href="/">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/news">News</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/blog">Blog</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation--user" href="/login">Login</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation--user" href="/register">Register</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/news">GEO</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/blog">ENG</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="bodyView" ng-view=""></div>
+
+    <footer>
+        <div class="wrapper">
+            asda
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="js/ng/app.js"></script>
+    <script src="js/ng/controllers/mainController.js"></script>
+    <script src="js/ng/controllers/registerController.js"></script>
+    <script src="js/ng/controllers/newsController.js"></script>
 </body>
 </html>
