@@ -1,7 +1,7 @@
 /**
  * Created by User on 6/13/2016.
  */
-var app = angular.module('node-lessons', ['ngRoute']);
+var app = angular.module('node-lessons', ['ngRoute', 'pascalprecht.translate']);
 
 app.config(function($routeProvider, $locationProvider) {
 
@@ -34,3 +34,23 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'loginController'
         })
 });
+
+app.config(['$translateProvider', function ($translateProvider) {
+    $translateProvider.translations('ka', {
+        'HOME': 'მთავარი',
+        'NEWS': 'სიახლეები',
+        'BLOG': 'ბლოგი',
+        'LOGIN': 'ავტორიზაცია',
+        'REGISTER': 'რეგისტრაცია'
+    });
+
+    $translateProvider.translations('en', {
+        'HOME': 'Home',
+        'NEWS': 'News',
+        'BLOG': 'Blog',
+        'LOGIN': 'Login',
+        'REGISTER': 'Register'
+    });
+
+    $translateProvider.preferredLanguage('ka');
+}]);
