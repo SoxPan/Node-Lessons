@@ -54,3 +54,9 @@ app.config(['$translateProvider', function ($translateProvider) {
 
     $translateProvider.preferredLanguage('ka');
 }]);
+
+app.controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
+    $scope.changeLanguage = function (langKey) {
+        $translate.use(langKey);
+    };
+}]);

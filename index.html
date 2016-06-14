@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="node-lessons">
 <head>
     <meta charset="UTF-8">
     <title>Node Lessons</title>
     <link rel="stylesheet" href="/css/style.css">
     <base href="/">
 </head>
-<body ng-app="node-lessons">
+<body ng-controller="Ctrl">
 
     <header>
         <div class="wrapper">
@@ -17,8 +17,8 @@
                 <li class="navigation__item"><a class="navigation__link" href="/blog">{{ 'BLOG' | translate }}</a></li>
                 <li class="navigation__item"><a class="navigation__link navigation--user" href="/login">{{ 'LOGIN' | translate }}</a></li>
                 <li class="navigation__item"><a class="navigation__link navigation--user" href="/register">{{ 'REGISTER' | translate }}</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/news">GEO</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/blog">ENG</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#" ng-click="changeLanguage('ka')">GEO</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#" ng-click="changeLanguage('en')">ENG</a></li>
             </ul>
         </div>
     </header>
