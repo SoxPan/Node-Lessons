@@ -8,8 +8,15 @@
   "url": "https://github.com/scotch-io/mean-machine-code"
   },
   "dependencies": {
-  "express": "latest",
-  "mongoose": "latest"
+    "express": "latest",
+    "mongoose": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "pass": "latest",
+    "passport": "latest",
+    "path": "latest"
   },
   "author": "Chris Sevilleja & Holly Lloyd",
   "license": "MIT",
