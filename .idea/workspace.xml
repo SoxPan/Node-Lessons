@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adea6185-a0ae-4f3b-a818-9e8969a4f010" name="Default" comment="New changes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/gb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ge.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/news-example.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search__submit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider.jpg" />
+    <list default="true" id="adea6185-a0ae-4f3b-a818-9e8969a4f010" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ng/app.js" afterPath="$PROJECT_DIR$/js/ng/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/main.html" afterPath="$PROJECT_DIR$/pages/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/news.html" afterPath="$PROJECT_DIR$/pages/news.html" />
     </list>
     <ignored path="Node.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -314,7 +303,7 @@
       <workItem from="1465828614832" duration="1539000" />
       <workItem from="1465888990198" duration="7261000" />
       <workItem from="1465913224505" duration="3176000" />
-      <workItem from="1465970599296" duration="16160000" />
+      <workItem from="1465970599296" duration="16166000" />
     </task>
     <task id="LOCAL-00001" summary="Added Angular and some node">
       <created>1465913415262</created>
@@ -351,11 +340,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465990143906</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="New changes">
+      <created>1465999887089</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1465999887089</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39371000" />
+    <option name="totallyTimeSpent" value="39377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="1" width="1684" height="1025" extended-state="0" />
@@ -414,7 +410,8 @@
     <MESSAGE value="Language Added" />
     <MESSAGE value="Language fix" />
     <MESSAGE value="Changed Design , Deleted some files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Design , Deleted some files" />
+    <MESSAGE value="New changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="New changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
