@@ -13,7 +13,7 @@
 <body ng-controller="Ctrl">
 
     <!-- HEADER -->
-    <header>
+    <header ng-controller="HeaderCtrl">
         <div class="header__top">
             <div class="wrapper">
                 <span class="header__languages"><img ng-click="changeLanguage('ka')" src="images/ge.png" alt="GEO LANG"></span>
@@ -28,11 +28,11 @@
             <div class="wrapper">
                 <h1 class="header__logo"><a href="/" class="logo__link">YOUR LOGO</a></h1>
                 <ul class="navigation">
-                    <li class="navigation__list"><a href="/" class="navigation__link">{{'HOME' | translate}}</a></li>
-                    <li class="navigation__list"><a href="/news" class="navigation__link">{{'NEWS' | translate}}</a></li>
-                    <li class="navigation__list"><a href="/about" class="navigation__link">{{'ABOUT' | translate}}</a></li>
-                    <li class="navigation__list"><a href="/gallery" class="navigation__link">{{'GALLERY' | translate}}</a></li>
-                    <li class="navigation__list"><a href="/feedback" class="navigation__link">{{'CONTACT' | translate}}</a></li>
+                    <li class="navigation__list" ng-class="{ active: isActive('/') }"><a href="/" class="navigation__link">{{'HOME' | translate}}</a></li>
+                    <li class="navigation__list" ng-class="{ active: isActive('/news') }"><a href="/news" class="navigation__link">{{'NEWS' | translate}}</a></li>
+                    <li class="navigation__list" ng-class="{ active: isActive('/about') }"><a href="/about" class="navigation__link">{{'ABOUT' | translate}}</a></li>
+                    <li class="navigation__list" ng-class="{ active: isActive('/gallery') }"><a href="/gallery" class="navigation__link">{{'GALLERY' | translate}}</a></li>
+                    <li class="navigation__list" ng-class="{ active: isActive('/feedback') }"><a href="/feedback" class="navigation__link">{{'CONTACT' | translate}}</a></li>
                 </ul>
             </div>
         </div>
