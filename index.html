@@ -3,42 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Node Lessons</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bpg-arial/css/bpg-arial.min.css">
+    <link rel="stylesheet" href="/node_modules/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/style.css">
     <base href="/">
 </head>
 <body ng-controller="Ctrl">
 
+    <!-- HEADER -->
     <header>
-        <div class="wrapper">
-            <h1 class="logo"><a href="/">Node Lessons</a></h1>
-            <ul class="navigation">
-                <li class="navigation__item"><a class="navigation__link" href="/">{{ 'HOME' | translate }}</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/news">{{ 'NEWS' | translate }}</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/blog">{{ 'BLOG' | translate }}</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation--user" href="/login">{{ 'LOGIN' | translate }}</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation--user" href="/register">{{ 'REGISTER' | translate }}</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#" ng-click="changeLanguage('ka')">GEO</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#" ng-click="changeLanguage('en')">ENG</a></li>
-            </ul>
+        <div class="header__top">
+            <div class="wrapper">
+                <span class="header__languages"><img ng-click="changeLanguage('ka')" src="images/ge.png" alt="GEO LANG"></span>
+                <span class="header__languages"><img ng-click="changeLanguage('en')" src="images/gb.png" alt="GB LANG"></span>
+                <fieldset class="search">
+                    <input type="search" class="search__field" name="search" id="search" placeholder="{{ 'SEARCH' | translate }}">
+                    <input type="submit" class="search__submit" name="search-submit" id="search-submit" value="">
+                </fieldset>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="wrapper">
+                <h1 class="header__logo"><a href="/" class="logo__link">YOUR LOGO</a></h1>
+                <ul class="navigation">
+                    <li class="navigation__list"><a href="/" class="navigation__link">{{'HOME' | translate}}</a></li>
+                    <li class="navigation__list"><a href="/news" class="navigation__link">{{'NEWS' | translate}}</a></li>
+                    <li class="navigation__list"><a href="/about" class="navigation__link">{{'ABOUT' | translate}}</a></li>
+                    <li class="navigation__list"><a href="/gallery" class="navigation__link">{{'GALLERY' | translate}}</a></li>
+                    <li class="navigation__list"><a href="/feedback" class="navigation__link">{{'CONTACT' | translate}}</a></li>
+                </ul>
+            </div>
         </div>
     </header>
-    <div id="bodyView" ng-view=""></div>
+    <!-- /HEADER -->
 
+    <!-- SITE CONTENT -->
+    <div class="viewPlace" ng-view=""></div>
+    <!-- /SITE CONTENT -->
+
+    <!-- FOOTER -->
     <footer>
         <div class="wrapper">
-            asda
+            Copyright
         </div>
     </footer>
-
+    <!-- /FOOTER -->
 
 
     <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="/node_modules/angular-translate/dist/angular-translate.js"></script>
     <script src="js/ng/app.js"></script>
     <script src="js/ng/controllers/mainController.js"></script>
-    <script src="js/ng/controllers/registerController.js"></script>
     <script src="js/ng/controllers/newsController.js"></script>
+    <script src="js/ng/controllers/feedbackController.js"></script>
+    <script src="js/ng/controllers/contentController.js"></script>
+    <script src="js/ng/controllers/galleryController.js"></script>
 </body>
 </html>

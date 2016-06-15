@@ -8,12 +8,14 @@
     "url": "https://github.com/scotch-io/mean-machine-code"
   },
   "dependencies": {
-    "express": "latest",
-    "mongoose": "latest",
     "angular": "latest",
     "angular-route": "latest",
+    "bpg-arial": "^1.0.0",
+    "bpg-nino-mtavruli": "^1.0.0",
+    "express": "latest",
     "gulp": "latest",
     "gulp-sass": "latest",
+    "mongoose": "latest",
     "pass": "latest",
     "passport": "latest",
     "path": "latest"
@@ -22,6 +24,7 @@
   "license": "MIT",
   "homepage": "https://github.com/scotch-io/mean-machine-code",
   "devDependencies": {
-    "angular-translate": "^2.11.0"
+    "angular-translate": "^2.11.0",
+    "bootstrap": "^3.3.6"
   }
 }

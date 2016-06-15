@@ -14,24 +14,24 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'mainPageController'
         })
 
-        .when('/register', {
-            templateUrl: 'pages/register.html',
-            controller: 'registerController'
-        })
-
         .when('/news', {
             templateUrl: 'pages/news.html',
             controller: 'newsController'
         })
 
-        .when('/blog', {
-            templateUrl: 'pages/blog.html',
-            controller: 'blogController'
+        .when('/about', {
+            templateUrl: 'pages/about.html',
+            controller: 'contentController'
         })
 
-        .when('/login', {
-            templateUrl: 'pages/login.html',
-            controller: 'loginController'
+        .when('/feedback', {
+            templateUrl: '/pages/contact.html',
+            controller: 'feedbackController'
+        })
+
+        .when('/gallery', {
+            templateUrl: '/pages/gallery.html',
+            controller: 'galleryController'
         })
 });
 
@@ -39,17 +39,21 @@ app.config(['$translateProvider', function ($translateProvider) {
     $translateProvider.translations('ka', {
         'HOME': 'მთავარი',
         'NEWS': 'სიახლეები',
-        'BLOG': 'ბლოგი',
-        'LOGIN': 'ავტორიზაცია',
-        'REGISTER': 'რეგისტრაცია'
+        'ABOUT': 'ჩვენ შესახებ',
+        'GALLERY': 'გალერეა',
+        'CONTACT': 'კონტაქტი',
+        'SEARCH': 'ძიება საიტზე',
+        'CATEGORIES': 'კატეგორიები'
     });
 
     $translateProvider.translations('en', {
         'HOME': 'Home',
         'NEWS': 'News',
-        'BLOG': 'Blog',
-        'LOGIN': 'Login',
-        'REGISTER': 'Register'
+        'ABOUT': 'About us',
+        'GALLERY': 'Gallery',
+        'CONTACT': 'Contact',
+        'SEARCH': 'Search...',
+        'CATEGORIES': 'Categories'
     });
 
     $translateProvider.preferredLanguage('ka');
