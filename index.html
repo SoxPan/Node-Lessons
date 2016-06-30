@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="node-lessons">
+<html lang="en" ng-app="node-lessons" amp>
 <head>
     <meta charset="UTF-8">
     <title>Node Lessons</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=1">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-url" content="m.adjarapay.com" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/node_modules/bpg-arial/css/bpg-arial.min.css">
     <link rel="stylesheet" href="/node_modules/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css">
@@ -12,8 +19,9 @@
 </head>
 <body ng-controller="Ctrl">
 
-    <!-- HEADER -->
-    <header ng-controller="HeaderCtrl">
+
+<!-- HEADER -->
+    <header class="header" ng-controller="HeaderCtrl">
         <div class="header__top">
             <div class="wrapper">
                 <span class="header__languages"><img ng-click="changeLanguage('ka')" src="images/ge.png" alt="GEO LANG"></span>
@@ -51,7 +59,8 @@
     </footer>
     <!-- /FOOTER -->
 
-
+    <script src="js/main.js"></script>
+    <script src="js/workerLoader.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/node_modules/angular/angular.js"></script>
