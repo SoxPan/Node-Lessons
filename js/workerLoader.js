@@ -1,1 +1,0 @@
-"serviceWorker"in navigator&&navigator.serviceWorker.register("js/appCache.js",{scope:"./"}).then(function(e){console.log("Service worker registered")})["catch"](function(e){console.log(e)});

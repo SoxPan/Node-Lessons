@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="node-lessons" amp>
+<html lang="en" ng-app="node-lessons" >
 <head>
     <meta charset="UTF-8">
     <title>Node Lessons</title>
@@ -41,11 +41,14 @@
                     <li class="navigation__list" ng-class="{ active: isActive('/about') }"><a href="/about" class="navigation__link">{{'ABOUT' | translate}}</a></li>
                     <li class="navigation__list" ng-class="{ active: isActive('/gallery') }"><a href="/gallery" class="navigation__link">{{'GALLERY' | translate}}</a></li>
                     <li class="navigation__list" ng-class="{ active: isActive('/feedback') }"><a href="/feedback" class="navigation__link">{{'CONTACT' | translate}}</a></li>
+                    <li class="navigation__list" ng-class="{ active: isActive('/github') }"><a href="/github" class="navigation__link">{{'GITHUB' | translate}}</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <!-- /HEADER -->
+
+
 
     <!-- SITE CONTENT -->
     <div class="viewPlace" ng-view=""></div>
@@ -60,17 +63,19 @@
     <!-- /FOOTER -->
 
     <script src="js/main.js"></script>
-    <script src="js/workerLoader.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="/node_modules/angular-translate/dist/angular-translate.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="js/ng-map.min.js"></script>
     <script src="js/ng/app.js"></script>
     <script src="js/ng/controllers/mainController.js"></script>
     <script src="js/ng/controllers/newsController.js"></script>
     <script src="js/ng/controllers/feedbackController.js"></script>
     <script src="js/ng/controllers/contentController.js"></script>
     <script src="js/ng/controllers/galleryController.js"></script>
+    <script src="js/ng/controllers/githubController.js"></script>
 </body>
 </html>

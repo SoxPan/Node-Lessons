@@ -1,0 +1,32 @@
+<section class="github-place" ng-controller="githubController">
+    <div class="wrapper">
+        <table class="table table-bordered table-condensed table-hover">
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>Avatar</td>
+                <td>User ID</td>
+                <td>Name</td>
+                <td>Repos</td>
+                <td>Profile Link</td>
+                <td>Api User Link</td>
+                <td>Type</td>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in userData | limitTo : quantity" style="cursor: pointer" ng-click="go();">
+                    <td>{{$index + 1}}</td>
+                    <td style="vertical-align: middle"><img width="40" ng-src="{{x.avatar_url}}" alt="{{x.login}}"></td>
+                    <td style="vertical-align: middle">{{x.id}}</td>
+                    <td style="vertical-align: middle">{{x.login}}</td>
+                    <td style="vertical-align: middle">{{x.repos_url}}</td>
+                    <td style="vertical-align: middle">{{x.html_url}}</td>
+                    <td style="vertical-align: middle">{{x.url}}</td>
+                    <td style="vertical-align: middle">{{x.site_admin}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</section>
+

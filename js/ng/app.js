@@ -1,7 +1,7 @@
 /**
  * Created by User on 6/13/2016.
  */
-var app = angular.module('node-lessons', ['ngRoute', 'pascalprecht.translate']);
+var app = angular.module('node-lessons', ['ngRoute', 'pascalprecht.translate' , 'ngMap']);
 
 app.config(function($routeProvider, $locationProvider) {
 
@@ -33,6 +33,11 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: '/pages/gallery.html',
             controller: 'galleryController'
         })
+
+        .when('/github', {
+            templateUrl: '/pages/github.html',
+            controller: 'githubController'
+        })
 });
 
 app.config(['$translateProvider', function ($translateProvider) {
@@ -43,7 +48,8 @@ app.config(['$translateProvider', function ($translateProvider) {
         'GALLERY': 'გალერეა',
         'CONTACT': 'კონტაქტი',
         'SEARCH': 'ძიება საიტზე',
-        'CATEGORIES': 'კატეგორიები'
+        'CATEGORIES': 'კატეგორიები',
+        'GITHUB' : 'გიტჰაბის პროფილები'
     });
 
     $translateProvider.translations('en', {
@@ -53,17 +59,17 @@ app.config(['$translateProvider', function ($translateProvider) {
         'GALLERY': 'Gallery',
         'CONTACT': 'Contact',
         'SEARCH': 'Search...',
-        'CATEGORIES': 'Categories'
+        'CATEGORIES': 'Categories',
+        'GITHUB' : 'Github Accounts'
     });
 
     $translateProvider.preferredLanguage('ka');
 }]);
 
-app.controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
+app.controller('Ctrl', ['$translate' , '$scope', function ($translate, $scope) {
     $scope.changeLanguage = function (langKey) {
         $translate.use(langKey);
     };
-
 
 }]).directive('newsblock', function() {
     return {

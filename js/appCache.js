@@ -1,1 +1,0 @@
-console.log("started"),self.addEventListener("install",function(e){console.log("install",e)}),self.addEventListener("activate",function(e){console.log("activate",e)});

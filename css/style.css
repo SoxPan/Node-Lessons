@@ -105,12 +105,20 @@ header {
 }
 
 .navigation__list {
-    margin-left: 10px;
     font-size: 13px;
     display: inline;
+    transition: 0.3s;
+    padding: 5px 10px;
 }
 
 .navigation__list.active {
+     background: #fff;
+     color: #282828;
+     padding: 5px 10px;
+     border-radius: 3px;
+}
+
+.navigation__list:hover {
     background: #fff;
     color: #282828;
     padding: 5px 10px;
@@ -122,8 +130,11 @@ header {
     text-decoration: none !important;
 }
 
-
 .navigation__list.active .navigation__link {
+    color: #282828;
+}
+
+.navigation__list:hover .navigation__link {
     color: #282828;
 }
 
@@ -393,8 +404,13 @@ main {
     div.wrapper {width: 98%;}
 }
 
+.about__map {
+    height: calc(100vh - 163px);
+}
 
-.preloader {
-    padding: 50px;
-    background: url('../img/preloader.gif') no-repeat 50% 50% transparent;
+.github-place {
+    display: block;
+    float: left;
+    margin-top: 40px;
+    width: 100%;
 }
