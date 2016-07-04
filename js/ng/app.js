@@ -38,6 +38,11 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: '/pages/github.html',
             controller: 'githubController'
         })
+
+        .when('/github/:name', {
+            templateUrl: '/pages/githubinner.html',
+            controller: 'githubController'
+        })
 });
 
 app.config(['$translateProvider', function ($translateProvider) {

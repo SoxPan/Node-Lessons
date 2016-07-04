@@ -11,10 +11,11 @@
                 <td>Profile Link</td>
                 <td>Api User Link</td>
                 <td>Type</td>
+                <td>More Info</td>
             </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="x in userData | limitTo : quantity" style="cursor: pointer" ng-click="go();">
+                <tr ng-repeat="x in userData | limitTo : quantity" style="cursor: pointer">
                     <td>{{$index + 1}}</td>
                     <td style="vertical-align: middle"><img width="40" ng-src="{{x.avatar_url}}" alt="{{x.login}}"></td>
                     <td style="vertical-align: middle">{{x.id}}</td>
@@ -23,6 +24,7 @@
                     <td style="vertical-align: middle">{{x.html_url}}</td>
                     <td style="vertical-align: middle">{{x.url}}</td>
                     <td style="vertical-align: middle">{{x.site_admin}}</td>
+                    <td style="vertical-align: middle;"><a ng-href="/github/{{x.login}}">View Info</a></td>
                 </tr>
             </tbody>
 
