@@ -18,6 +18,8 @@ app.controller('githubController', ['$translate', '$scope', '$http', '$routePara
         $scope.repos = data;
         if($scope.repos.language == '') {
             console.log('idinaxui');
+        } else {
+
         }
     });
 

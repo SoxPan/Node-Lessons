@@ -43,6 +43,8 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: '/pages/githubinner.html',
             controller: 'githubController'
         })
+
+
 });
 
 app.config(['$translateProvider', function ($translateProvider) {

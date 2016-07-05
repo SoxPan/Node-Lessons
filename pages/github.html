@@ -1,5 +1,13 @@
 <section class="github-place" ng-controller="githubController">
     <div class="wrapper">
+
+        <div class="repositories-place">
+            <h3 class="left">Github Users</h3>
+            <fieldset class="right">
+                <input style="margin-top: 10px;" type="text" class="form-control" id="repo__search" placeholder="Search user" ng-model="userData.login">
+            </fieldset>
+        </div>
+
         <table class="table table-bordered table-condensed table-hover">
             <thead>
             <tr>
@@ -15,7 +23,7 @@
             </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="x in userData | limitTo : quantity" style="cursor: pointer">
+                <tr ng-repeat="x in userData | filter : userData.login" style="cursor: pointer">
                     <td>{{$index + 1}}</td>
                     <td style="vertical-align: middle"><img width="40" ng-src="{{x.avatar_url}}" alt="{{x.login}}"></td>
                     <td style="vertical-align: middle">{{x.id}}</td>
