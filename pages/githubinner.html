@@ -1,7 +1,41 @@
 <div class="githubInenr">
     <div class="wrapper">
-        <img class="github-place__avatar right" ng-src="{{user_avatar}}" alt="{{user_name}}">
-        <h3 class="github-place__title left">{{user_name}} ({{user_nickname}})</h3>
-        <span class="github__link left">{{user_link}}</span>
+        <img class="github-place__avatar right" ng-src="{{user.avatar_url}}" alt="{{user_name}}">
+        <h3 class="github-place__title left">{{user.name}} ({{user.login}})</h3>
+        <span class="github__link left">{{user.html_url}}</span>
+
+        <div class="clear"></div>
+
+
+
+        <div class="repositories-place">
+            <h3 class="left">Repositories</h3>
+            <fieldset class="right">
+                <input style="margin-top: 10px;" type="text" class="form-control" id="repo__search" placeholder="Search Repository" ng-model="repos.name">
+            </fieldset>
+        </div>
+
+        <table class="table table-bordered table-condensed table-hover">
+            <thead>
+                <tr>
+                    <td>Repository Name</td>
+                    <td>Repository Language</td>
+                    <td>Forks</td>
+                    <td>Stars</td>
+                    <td>Watches</td>
+                    <td>Repo Link</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="repo in repos | orderBy:'-stargazers_count' | filter: repos.name">
+                    <td>{{repo.name}}</td>
+                    <td>{{repo.language}}</td>
+                    <td>{{repo.forks}}</td>
+                    <td>{{repo.stargazers_count}}</td>
+                    <td>{{repo.watchers}}</td>
+                    <td><a ng-href="{{repo.html_url}}">View Project</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

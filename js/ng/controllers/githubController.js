@@ -6,16 +6,20 @@ app.controller('githubController', ['$translate', '$scope', '$http', '$routePara
     $http.get("https://api.github.com/users")
     .success(function(data) {
         $scope.userData = data;
-        $scope.quantity = 50;
     });
 
     $http.get("https://api.github.com/users/" + $routeParams.name)
-        .success(function(data){
-            $scope.user_nickname = data.login;
-            $scope.user_name = data.name;
-            $scope.user_link = data.url;
-            $scope.user_avatar = data.avatar_url;
-        });
+    .success(function(data){
+        $scope.user = data;
+    });
+
+    $http.get("https://api.github.com/users/" + $routeParams.name +"/repos")
+    .success(function(data){
+        $scope.repos = data;
+        if($scope.repos.language == '') {
+            console.log('idinaxui');
+        }
+    });
 
 
 }]);
